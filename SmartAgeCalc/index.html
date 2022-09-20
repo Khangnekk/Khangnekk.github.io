@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smart Age Calculator</title>
+	<link rel="icon" href="https://play-lh.googleusercontent.com/RMtTMYgXhnfp0I1shwGv4HqBg2l1FfVm4Rw8KJ49LWdv8EcXu2z2xGh-VcfQtGrxsWA_">
+	<style>
+		body{
+			background: linear-gradient(-45deg, #e952ee, #14db95, #23a6d5, #23d5ab);
+			background-size: 400% 400%;
+			animation: gradient 10s ease infinite;
+			height: 100vh;
+		}
+		#age{
+			width: 90vw;
+			height: 3rem;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+			padding: 0 10px;
+		}
+		p{
+			font-size: 20px;
+		}
+		.calc{
+			width: 8rem;
+			height: 2rem;
+			border: 1px solid #ccc;
+			border-radius: 7px;
+		}
+
+		@media screen and (min-width: 900px){
+			#age{
+				width: 50vw;
+			}
+		}
+
+		@keyframes gradient {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div style="position: absolute; top: 25%; left: 50%; transform: translate(-50%,-50%);">
+		<table style="margin: 0 auto; width: 100vw; height: 100px; text-align: center;">
+			<tr>
+				<h1 style="font-family: tahoma; color: white;font-size: 20px; text-align: center;">
+					Chào mừng bạn đến với máy tính tuổi thông minh
+				</h1>
+			</tr>
+			<tr>
+				<p style=" text-align: center; color: white;">
+					Nhập tuổi của bạn: 
+				</p>					
+			</tr>
+			<tr>
+				<td><input type="text" id="age" name="age"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" class="calc" name="calc" value="Calc" onclick="calc()"></td>
+			</tr>
+		</table>
+		<span>
+			<p id="content" style="color: black; text-align: center;font-size: 16px; font-weight: bold; font-family: tahoma;"></p>
+		</span>
+
+	</div>
+	<script type="text/javascript">
+		function calc(){
+			var age = document.getElementById("age").value;
+			const element = document.getElementById('content');
+			var result = "Bạn đã " + age +" tuổi rồi";
+			if(isNaN(age)){				
+					element.innerHTML = "\""+age+"\"" + " là cái tuổi méo gì 🙄";								
+			}else{
+				if(age>120||age<0){
+					element.innerHTML = "Bốc phét ít thôi 😒";
+				}else{
+					if(age==0){
+						element.innerHTML = "Có gì đó sai sai 🤔";
+					}else{
+						element.innerHTML = result;
+					}
+				}			
+			}		
+		}
+	</script>
+</body>
+</html>
