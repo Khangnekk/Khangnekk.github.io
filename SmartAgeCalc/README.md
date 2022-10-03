@@ -8,14 +8,14 @@ This demo project is used to learn basic javascript
 
 ## GUIDE
 
-1. When user enter string 
-	for example: hsinufiv
+1. When user enter string /
+	for example: hsinufiv /
 	=> Result: "hsinufiv"  là cái tuổi méo gì. Nhập số cơ mà con nhợn này
-2. When user enter an integer number greater than 120 or less than 0
-	for example: 121 or -15
+2. When user enter an integer number greater than 120 or less than 0 /
+	for example: 121 or -15 /
 	=> Result: Bốc Phét ít thôi
-3. When user enter 0 or do not enter 
+3. When user enter 0 or do not enter /
 	=> Result: Có gì đó sai sai
-4. When user enter integer number from 1 to 119
-	for example: 70
+4. When user enter integer number from 1 to 119 /
+	for example: 70 /
 	=> Result: Bạn đã 70 tuổi rồi
