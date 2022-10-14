@@ -8,7 +8,7 @@ This demo project is used to learn basic javascript
 
 ## GUIDE
 
-1. When user enter string /
+1. When user enter string <br/>
 	for example: hsinufiv /
 	=> Result: "hsinufiv"  là cái tuổi méo gì. Nhập số cơ mà con nhợn này
 2. When user enter an integer number greater than 120 or less than 0 /
