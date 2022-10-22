@@ -384,7 +384,7 @@ body .birthday_inner__stage button:hover {
 }
 body .birthday_inner__stage .start {
 	margin-top: 69px;
-	animation: in 0.8s 1.25s forwards;
+	animation: in 0.5s 0.5s forwards;
 	position: relative;
 	top: 0px;
 	opacity: 0;
