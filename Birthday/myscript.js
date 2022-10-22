@@ -143,3 +143,17 @@ function count() {
     clicks += 1;
     document.getElementById("result").innerHTML = 'Bạn đã khuấy ' +clicks + ' lần';
 }
+
+(function($){
+    play    = $('#play');
+
+    //Song
+    song    = new Audio();
+    song.type= 'audio/mpeg';
+    song.src='./music/Happy Birthday To You - KTM.mp3';
+})(jQuery);
+
+play.click(function (e) {
+    e.preventDefault();
+    song.play();
+});
