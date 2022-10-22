@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  var i = 0;
+  var txt = 'Chúc ngày sinh nhật thật là tuyệt vời, thật là ý nghĩa. Chúc 1 tuổi mới sẽ gặt hái thêm những thành công mới, và luôn luôn vui tươi, hạnh phúc ❤️❤️❤️';
+  var speed = 80;
+  function type1() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(type1, speed);
+    }
+  }</script>
+
+<body>
+  <!-- <audio controls autoplay loop class="audio">
+    <source src="./music/Ｓｕｎｓｅｔ　ＩＩ.mp3">
+    Your browser dose not support this element
+  </audio> -->
+      <div class="birthday col-lg-12">
+        <div class="birthday_inner">
+          <div class="birthday_inner__modal">
+            <div class="modal_image">
+              <img />
+            </div>
+            <div class="modal_content">
+              <h1>Title</h1>
+              <p>Content</p>
+              <button>Được rồi đi thôi</button>
+            </div>
+          </div>
+          <div class="birthday_inner__stage stage1">
+            <div class="intro_cake">
+              <img class="intro" src="" />
+              <div class="gallery">
+                <span style="--i:1">
+                  <img src="Mai_Project/1.jpg" alt="" />
+                </span>
+                <span style="--i:2">
+                  <img src="Mai_Project/2.jpg" alt="" />
+                </span>
+                <span style="--i:3">
+                  <img src="Mai_Project/3.jpg" alt="" />
+                </span>
+                <span style="--i:4">
+                  <img src="Mai_Project/4.jpg" alt="" />
+                </span>
+                <span style="--i:5">
+                  <img src="Mai_Project/5.jpg" alt="" />
+                </span>
+                <span style="--i:6">
+                  <img src="Mai_Project/6.jpg" alt="" />
+                </span>
+                <span style="--i:7">
+                  <img src="Mai_Project/7.jpg" alt="" />
+                </span>
+                <span style="--i:8">
+                  <img src="Mai_Project/8.jpg" alt="" />
+                </span>
+              </div>
+            </div>
+            <button class="start">Cùng làm bánh sinh nhật nào</button>
+          </div>
+          <div class="birthday_inner__stage stage2">
+            <h1>Trước tiên là chuẩn bị hỗn hợp</h1>
+            <h2>Trộn tất cả nguyên liệu cần thiết vào 1 chiếc bát lớn, công việc của bạn là bấm liên tục vào nút "Trộn hỗn hợp"
+              để bột được đều và mịn</h2>
+            <div class="mix">
+              <div class="mix_bowl">
+                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/bowl.png' />
+              </div>
+              <div class="mix_spoon">
+                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/spoon.png' />
+              </div>
+            </div>
+            <p id="result"></p><br>
+            <button onclick="count()" class="mixer">Trộn hỗn hợp</button>
+          </div>
+          <div class="birthday_inner__stage stage3">
+            <h1>Nướng bánh thôi</h1>
+            <h2>Giờ thì, để hỗn hợp mình vừa nhào vào trong lò nướng bằng cách kéo bánh vào trong nồi rồi đợi 1 tý để
+              bánh
+              nó chín nhó</h2>
+            <div class="oven">
+              <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/oven.png' />
+            </div>
+            <div class="tin">
+              <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tin.png' />
+            </div>
+          </div>
+          <div class="birthday_inner__stage stage4">
+            <h1>Tèn ten! Công đoạn cuối cùng rồi</h1>
+            <h2>Đặt các tầng theo thứ tự mà bạn muốn. Sau đó nhấn nút để hoàn thành, thêm nến vào bánh sinh nhật là tận
+              hưởng thành quả nào</h2>
+            <div class="svg">
+              <p id="demo"></p>         
+            </div>
+            <div class="options">
+              <div class="sponges inactive">
+                <h3>Sponges</h3>
+                <h5>
+                  <span>0</span>
+                  / 5
+                </h5>
+                <div class="item">
+                  <div class="item_inner vanilla"></div>
+                  <h4>Vanilla</h4>
+                </div>
+                <div class="item">
+                  <div class="item_inner strawberry"></div>
+                  <h4>Pink</h4>
+                </div>
+                <div class="item">
+                  <div class="item_inner fruit"></div>
+                  <h4>Fruit</h4>
+                </div>
+              </div>
+              <div class="fillings">
+                <h3>Fillings/icing</h3>
+                <h5>
+                  <span>0</span>
+                  / 6
+                </h5>
+                <div class="item">
+                  <div class="item_inner jam"></div>
+                  <h4>Jam</h4>
+                </div>
+                <div class="item">
+                  <div class="item_inner cream"></div>
+                  <h4>Cream</h4>
+                </div>
+                <div class="item">
+                  <div class="item_inner choc"></div>
+                  <h4>Choc</h4>
+                </div>
+                <div class="item">
+                  <div class="item_inner lemon"></div>
+                  <h4>Lemon</h4>
+                </div>
+              </div>
+            </div>
+            <div class="cakemake">
+              <div class="base"></div>
+            </div>
+            <div class="startagain">Làm lại</div>
+            <button class="add" onclick="type1()">Hoàn thành</button>
+            <button class="sa">Làm lại từ đầu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+<script src="myscript.js"></script>
+
+</html>
