@@ -9,14 +9,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:title" content="Chúc Mừng Sinh Nhật" /> 
-	<meta property="og:image" content="Mai_Project/og_img.jpg" /> 
+	<meta property="og:image" content="images/og_img.jpg" /> 
 	<meta property="og:description" content="Chúc mừng sinh nhật Mai nhá, chúc Mai have fun với cái project này" />
 
 	<title>Chúc Mừng Sinh Nhật</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="Mai_Project/icon.jpg">
+	<link rel="icon" href="images/icon.jpg">
 </head>
 <script>
 	var i = 0;
@@ -48,28 +48,28 @@
 						<img class="intro" src="" />
 						<div class="gallery">
 							<span style="--i:1">
-								<img src="Mai_Project/1.jpg" alt="" />
+								<img src="images/1.jpg" alt="" />
 							</span>
 							<span style="--i:2">
-								<img src="Mai_Project/7.jpg" alt="" />
+								<img src="images/7.jpg" alt="" />
 							</span>
 							<span style="--i:3">
-								<img src="Mai_Project/6.jpg" alt="" />
+								<img src="images/6.jpg" alt="" />
 							</span>
 							<span style="--i:4">
-								<img src="Mai_Project/5.jpg" alt="" />
+								<img src="images/5.jpg" alt="" />
 							</span>
 							<span style="--i:5">
-								<img src="Mai_Project/4.jpg" alt="" />
+								<img src="images/4.jpg" alt="" />
 							</span>
 							<span style="--i:6">
-								<img src="Mai_Project/3.jpg" alt="" />
+								<img src="images/3.jpg" alt="" />
 							</span>
 							<span style="--i:7">
-								<img src="Mai_Project/2.jpg" alt="" />
+								<img src="images/2.jpg" alt="" />
 							</span>
 							<span style="--i:8">
-								<img src="Mai_Project/8.jpg" alt="" />
+								<img src="images/8.jpg" alt="" />
 							</span>
 						</div>
 					</div>
@@ -102,67 +102,125 @@
 						<img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tin.png' />
 					</div>
 				</div>
-				<div class="birthday_inner__stage stage4">
-					<h1>Tèn ten! Công đoạn cuối cùng rồi</h1>
-					<h2>Đặt các tầng theo thứ tự mà bạn muốn. Sau đó nhấn nút để hoàn thành, thêm nến vào bánh sinh nhật là tận
-					hưởng thành quả nào</h2>
-					<div class="svg">
-						<p id="demo"></p>         
-					</div>
-					<div class="options">
-						<div class="sponges inactive">
-							<h3>Sponges</h3>
-							<h5>
-								<span>0</span>
-								/ 5
-							</h5>
-							<div class="item">
-								<div class="item_inner vanilla"></div>
-								<h4>Vanilla</h4>
-							</div>
-							<div class="item">
-								<div class="item_inner strawberry"></div>
-								<h4>Pink</h4>
-							</div>
-							<div class="item">
-								<div class="item_inner fruit"></div>
-								<h4>Fruit</h4>
-							</div>
-						</div>
-						<div class="fillings">
-							<h3>Fillings/icing</h3>
-							<h5>
-								<span>0</span>
-								/ 6
-							</h5>
-							<div class="item">
-								<div class="item_inner jam"></div>
-								<h4>Jam</h4>
-							</div>
-							<div class="item">
-								<div class="item_inner cream"></div>
-								<h4>Cream</h4>
-							</div>
-							<div class="item">
-								<div class="item_inner choc"></div>
-								<h4>Choc</h4>
-							</div>
-							<div class="item">
-								<div class="item_inner lemon"></div>
-								<h4>Lemon</h4>
-							</div>
-						</div>
-					</div>
-					<div class="cakemake">
-						<div class="base"></div>
-					</div>
-					<div class="startagain">Làm lại</div>
-					<button class="add" onclick="type1()">Hoàn thành</button>
-					<button class="sa">Làm lại từ đầu</button>
-				</div>
+<!-- 				<script>
+					var dropbox = document.querySelector('.oven');
+					
+					var drg , drgT , drgL , drgB , drgR ;
+
+					var el , avail ;
+
+					function dragStart(evt){
+						el = evt.target ;
+						if(el.getAttribute('draggable') == 'true'){
+							avail = 'available';
+						} else {
+							avail = '';
+						}
+					}
+
+					function drag(evt){
+						if(avail == 'available'){
+							el.style.position="absolute";
+							el.style.left=evt.touches[0].clientX-el.clientWidth/2;
+							el.style.top=evt.touches[0].clientY-el.clientHeight/2;
+
+							drg = el.getBoundingClientRect();
+							drgT = drg.top ;
+							drgB = drg.bottom ;
+							drgL = drg.left ;
+							drgR = drg.right ;
+						} else {}
+						evt.preventDefault();
+					}
+
+					function drop(){
+
+      // update on drop
+
+      var drp = dropbox.getBoundingClientRect();
+
+      var drpT = drp.top ,
+      drpL = drp.left ,
+      drpB = drp.bottom ,
+      drpR = drp.right ;
+
+
+      if(avail == 'available'){
+      	if(drpT < drgT &&
+      		drpL < drgL &&
+      		drpB > drgB &&
+      		drpR > drgR){
+      		dropbox.appendChild(el);
+
+      	el.style.position='';
+      	el.setAttribute('draggable','false');
+      	alert('ok rồi đấy');
+      }
+  } else {}
+
+}
+</script> -->
+<div class="birthday_inner__stage stage4">
+	<h1>Tèn ten! Công đoạn cuối cùng rồi</h1>
+	<h2>Đặt các tầng theo thứ tự mà bạn muốn. Sau đó nhấn nút để hoàn thành, thêm nến vào bánh sinh nhật là tận
+	hưởng thành quả nào</h2>
+	<div class="svg">
+		<p id="demo"></p>         
+	</div>
+	<div class="options">
+		<div class="sponges inactive">
+			<h3>Sponges</h3>
+			<h5>
+				<span>0</span>
+				/ 5
+			</h5>
+			<div class="item">
+				<div class="item_inner vanilla"></div>
+				<h4>Vanilla</h4>
+			</div>
+			<div class="item">
+				<div class="item_inner strawberry"></div>
+				<h4>Pink</h4>
+			</div>
+			<div class="item">
+				<div class="item_inner fruit"></div>
+				<h4>Fruit</h4>
+			</div>
+		</div>
+		<div class="fillings">
+			<h3>Fillings/icing</h3>
+			<h5>
+				<span>0</span>
+				/ 6
+			</h5>
+			<div class="item">
+				<div class="item_inner jam"></div>
+				<h4>Jam</h4>
+			</div>
+			<div class="item">
+				<div class="item_inner cream"></div>
+				<h4>Cream</h4>
+			</div>
+			<div class="item">
+				<div class="item_inner choc"></div>
+				<h4>Choc</h4>
+			</div>
+			<div class="item">
+				<div class="item_inner lemon"></div>
+				<h4>Lemon</h4>
 			</div>
 		</div>
 	</div>
+	<div class="cakemake">
+		<div class="base"></div>
+	</div>
+	<div class="startagain">Làm lại</div>
+	<button class="add" onclick="type1()">Hoàn thành</button>
+	<button class="sa">Làm lại từ đầu</button>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 <script src="myscript.js"></script>
