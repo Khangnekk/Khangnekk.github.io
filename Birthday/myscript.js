@@ -27,10 +27,11 @@ function fire_modal(imgurl,title,content){
     modal.find('img').attr('src',imgurl);
     modal.find('p').html(content);
     setTimeout(function(){
-        modal.css('transform','translateY(-50%) scale(1)')
+        modal.css('transform','translateY(-50%) ')
     },1000)
 }
 
+// mixing
 
 mixing = false;
 mixtimes = 0;
@@ -52,6 +53,8 @@ $('.mixer').click(function(){
     }
 
 })
+
+// draggable
 
 $('.tin').draggable({
     revert:true

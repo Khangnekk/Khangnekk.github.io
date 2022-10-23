@@ -493,3 +493,22 @@ svg {
 	height:100%;
 	object-fit:cover;
 }
+
+@media only screen and (max-width: 600px) {
+	body .birthday_inner__stage {
+		width: auto;
+		padding: auto 10px;
+	}
+
+	body .birthday_inner__modal {
+		width: auto;
+		padding: 40px 20px 100px 20px;
+		margin: auto 10px;
+	}
+
+	body .birthday_inner__stage .mix_spoon {
+		position: absolute;
+		top: -37px;
+		left: 148px;
+	}
+}
