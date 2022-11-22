@@ -271,6 +271,9 @@ ul li {
 #Skills ul li{
     list-style: circle;
 }
+#Experiences ul li{
+    list-style: circle;
+}
 
 @media (max-width: 1023px) {
     .nav-pc {
