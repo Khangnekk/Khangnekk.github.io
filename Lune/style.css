@@ -57,6 +57,7 @@ body .birthday_inner__modal .modal_image img {
 	width: 100px;
 }
 body .birthday_inner__modal h1 {
+	font-size: 1.5em;
 	color: #e77572;
 	margin: 0;
 }
