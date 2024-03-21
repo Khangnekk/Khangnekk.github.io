@@ -102,3 +102,17 @@ function flameToggle() {
 backToStage1.addEventListener('click', () => {
     location.reload();
 });
+
+(function($){
+    play    = $('#play');
+
+    //Song
+    song    = new Audio();
+    song.type= 'audio/mpeg';
+    song.src='./musics/Happy Birthday.mp3';
+})(jQuery);
+
+play.click(function (e) {
+    e.preventDefault();
+    song.play();
+});
