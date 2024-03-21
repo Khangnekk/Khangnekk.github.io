@@ -61,6 +61,7 @@ blowOutCandles.addEventListener('click', () => {
     stage3.style.display = 'none';
     stagefinal.style.display = 'none';
     stageEnd.style.display = 'none';
+    playAudio();
 });
 
 _continue.addEventListener('click', () => {
