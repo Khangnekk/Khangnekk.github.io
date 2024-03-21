@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTTN</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="audio-source">
+        <audio autoplay preload="auto" loop id="myAudio">
+            <source src="assets/musics/Happy Birthday.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="top">
+        <button type="button" id="muteButton" class="muteButton">
+            <i id="muteIcon" class="fa fa-volume-up"></i>
+        </button>
+    </div>
+    <div class="stage">
+        <div class="stage1" id="stage1">
+            <div class="guide-card">
+                <div class="image-header">
+                    <div>
+                        <img src="/assets/images/hpd.png" />
+                    </div>
+                </div>
+                <h3>Chúc mừng sinh nhật</h3>
+                <div class="guide-content">
+                    <p>21/3/2002 - 21/03/2024</p>
+                    <p>
+                        Chúc mừng sinh nhật Ngoan nhé.
+                        Nhiệm vụ của cậu trong màn này là hãy ước 3 điều ước.<br>
+                        Sau đó tìm cách thổi nến nha.
+                    </p>
+                </div>
+                <button id="blowOutCandles">Thổi nến nào</button>
+            </div>
+        </div>
+        <div class="stage2" id="stage2">
+            <div class="candle">
+                <div id="flame" class="lit"></div>
+            </div>
+
+            <div class="cake">
+                <div class="plate"></div>
+            </div>
+        </div>
+        <div class="stage3" id="stage3">
+            <div class="guide-card">
+                <div class="guide-content">
+                    <div class="image-header">
+                        <div>
+                            <img src="/assets/images/bongbay.png" style="height: auto;" />
+                        </div>
+                    </div>
+                    <h3>Hoàn thành</h3>
+                    <p>
+                        Siêu thật đấy!!!<br>
+                        Không ai dạy mà tự biết luôn!<br>
+                        Giờ đi mở thiệp sinh nhật thôi
+                    </p>
+                    <button id="_continue">Tiếp tục</button>
+                </div>
+            </div>
+        </div>
+        <div class="stagefinal" id="stagefinal">
+            <div class="letter-image" id="letterImage">
+                <div class="animated-mail">
+                    <div class="back-fold"></div>
+                    <div class="letter">
+                        <div class="letter-border"></div>
+                        <div class="letter-title"></div>
+                        <div class="letter-context"></div>
+                        <div class="letter-stamp">
+                            <div class="letter-stamp-inner"></div>
+                        </div>
+                    </div>
+                    <div class="top-fold"></div>
+                    <div class="body"></div>
+                    <div class="left-fold"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="stageEnd" id="stageEnd">
+            <div class="mail-content" id="mailContent">
+                <div class="image-header">
+                    <div>
+                        <img src="/assets/images/letter.png" />
+                    </div>
+                </div>
+                <div class="content-letter" id="contentLetter">
+                    <h3>Thân gửi: Vũ Thị Thanh Ngoan</h3>
+                    <a style="font-size: 0.7em;">Thứ 5, 21/03/2024</a>
+                    <p id="content">
+                    <p><b>From: Hòa Lạc with love</b></p>
+                    <p>
+                        Chúc mừng sinh nhật, cô bạn thân yêu của tôi!
+                    </p>
+                    <p>
+                        22 tuổi rồi đấy, một tuổi mới đầy tiềm năng và cơ hội. Hy vọng năm nay sẽ đem lại cho cậu những
+                        niềm vui, thành công và hạnh phúc lớn lao.
+                    </p>
+                    <p>
+                        Luôn giữ vững niềm tin vào bản thân và tiếp tục phấn đấu theo đam mê của mình. Tớ luôn ở đây để
+                        ủng hộ và chia sẻ mọi khoảnh khắc với cậu.
+                    </p>
+                    <p>
+                        Chúc mừng sinh nhật, nữ hoàng của ngày hôm nay!
+                    </p>
+                    </p>
+                    <p>Khang</p>
+                </div>
+                <div class="image-foot">
+                    <div>
+                        <img src="/assets/images/heart.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-end">
+            <button id="backToStage1">Về trang đầu tiên</button>
+        </div>
+        <!-- <div class="guide">
+            <p>Hướng dẫn:</p>
+        </div> -->
+    </div>
+</body>
+<script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/processAnim.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</html>
