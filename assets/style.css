@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Thêm padding cho màn hình nhỏ */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
+    width: 100%; /* Để container có thể co giãn */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2em;
+    color: #2c3e50;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    flex-wrap: wrap; /* Cho phép các logo xuống dòng nếu không đủ chỗ */
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Thêm khoảng cách giữa các logo khi xuống dòng */
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.company-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.company-name-1 {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(73, 163, 241);
+}
+
+.contact {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
+}
+
+.contact p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact li {
+    margin: 3px 0;
+    font-size: 1.1em;
+}
+
+.contact-link {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #0056b3;
+}
+
+.contact-link:active {
+    color: #004085;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #efefef;
+    font-size: 1em;
+    color: #6c757d;
+    font-family: Arial, sans-serif;
+    border-radius: 9px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Media Query để làm cho trang responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .logos {
+        flex-direction: column; /* Sắp xếp các logo theo cột khi trên màn hình nhỏ */
+        gap: 20px;
+    }
+
+    .logo {
+        width: 80px; /* Giảm kích thước logo trên màn hình nhỏ */
+        height: 80px;
+    }
+
+    .container {
+        padding: 20px; /* Giảm padding khi màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+}
